@@ -1,0 +1,8 @@
+CREATE TABLE personagens (
+    id INTEGER PRIMARY KEY,
+    nome TEXT NOT NULL,
+    raça TEXT CHECK (raça IN ('Anão', 'Elfo', 'Meio_Elfo', 'Halfling', 'Humano', 'Draconato', 'Gnomo', 'Meio_Orc', 'Tiefling')),
+    classe TEXT check (classe in ('Barbáro', 'Bardo', 'Clérigo', 'Druida', 'Bruxo', 'Feiticeiro', 'Guardião', 'Guerreiro', 'Ladino', 'Mago', 'Monge')),
+    antecendente TEXT NOT NULL,
+    alinhamento TEXT CHECK (alinhamento in ('Ordeiro_Bom', 'Neutro_Bom', 'Caótico_Bom', 'Ordeiro_Neutro', 'Neutro', 'Caótico_Neutro', 'Ordeiro_Mau', 'Neutro_Mau', 'Caótico_Mau'))
+);
